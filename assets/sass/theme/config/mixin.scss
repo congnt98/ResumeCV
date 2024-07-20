@@ -1,0 +1,109 @@
+
+@mixin transition {
+  transition: all 0.3s ease;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-align {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-justify {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin reset($type: null) {
+  @if $type == spacing {
+    margin: 0;
+    padding: 0;
+  } @else if $type == list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & li {
+      margin: 0;
+      padding: 0;
+    }
+  } @else if $type == everything {
+    float: none;
+    position: static;
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    list-style: none;
+    inset: unset;
+    transform: unset;
+  }
+}
+
+@mixin centerPosition($pos) {
+  position: absolute;
+  @if $pos == "mid" {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if $pos == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $pos == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+@mixin font-light($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: 300;
+}
+
+@mixin font-regular($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: 400;
+}
+
+@mixin font-medium($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: 500;
+}
+
+@mixin font-semi-bold($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: 600;
+}
+
+@mixin font-bold($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: 700;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}

@@ -1,0 +1,32 @@
+// Media Queries for Responsiveness
+@media (max-width: 768px) {
+  main {
+    flex-wrap: wrap;
+    .main-content{
+      order: 1;
+    }
+    .right-sidebar{
+      order: 0;
+      flex:  0 0 100%;
+    }
+  }
+  header {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .social {
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .section-experience {
+    .tabs {
+      .tab-buttons {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}

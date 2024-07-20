@@ -1,0 +1,5 @@
+{
+  "dist/css/style.css": "../../dist/css/style.css",
+  "dist/css/style.js": "../../dist/css/style.js",
+  "dist/runtime.js": "../../dist/runtime.js"
+}
