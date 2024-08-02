@@ -1,0 +1,95 @@
+
+footer {
+  background-color: $background-color;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid $secondary-color;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    > div {
+      flex: 1;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+
+      @media (max-width: 768px) {
+        padding: 0;
+      }
+    }
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: $primary-color;
+  }
+
+  p {
+    margin: 0;
+    color: $text-color;
+    line-height: 1.5;
+  }
+
+  .download-cv {
+    a {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: $accent-color;
+      color: $background-color;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+
+  .footer-note {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: $secondary-color;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: $text-color;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: $secondary-color;
+    color: $primary-color;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 99;
+
+    &:hover {
+      background-color: $accent-color;
+      color: $background-color;
+    }
+  }
+}

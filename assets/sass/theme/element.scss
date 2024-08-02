@@ -3,12 +3,71 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: IBM Plex Sans;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     color: $black;
+    height: 600px;
+    background: linear-gradient(62deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    position: relative;
+}
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.cat {
+    /*   background: url(''); */
+    height: 100px;
+    width: 134px;
+    bottom: 10px;
+    position: fixed;
+    animation: walk 25s linear infinite;
+}
+
+@keyframes walk {
+    0%,
+    100% {
+        left: 0;
+        transform: translatex(-50%) scalex(1);
+    }
+    49% {
+        left: 100%;
+        transform: translatex(-50%) scalex(1);
+    }
+    50% {
+        left: 100%;
+        transform: translatex(-50%) scalex(-1);
+    }
+    99% {
+        left: 0;
+        transform: translatex(-50%) scalex(-1);
+    }
 }
 
 .container {

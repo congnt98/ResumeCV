@@ -1,0 +1,79 @@
+// Header Styles
+header {
+    padding: 20px 0;
+    .container {
+      @include flex-center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  
+    .info-wrapper {
+      @include flex-center;
+      gap: 20px;
+  
+      .avatar {
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px solid $secondary-color;
+        }
+  
+        .name {
+          font-size: 14px;
+          color: $accent-color;
+          margin-top: 5px;
+          text-align: center;
+        }
+      }
+  
+      .information {
+        h1 {
+          font-size: 24px;
+          color: $primary-color;
+          margin-bottom: 5px;
+        }
+  
+        .address {
+          font-size: 14px;
+          color: $text-color;
+  
+          span {
+            display: block;
+            margin-bottom: 3px;
+  
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  
+    .social {
+      @include flex-center;
+      gap: 15px;
+      margin-top: 15px;
+  
+      .social-item {
+        @include flex-center;
+        gap: 5px;
+  
+        .icon {
+          font-size: 18px;
+        }
+  
+        .content {
+          font-size: 14px;
+          color: $text-color;
+          text-decoration: none;
+          @include transition;
+  
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
