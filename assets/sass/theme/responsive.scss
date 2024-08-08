@@ -2,12 +2,12 @@
 @media (max-width: 768px) {
   main {
     flex-wrap: wrap;
-    .main-content{
+    .main-content {
       order: 1;
     }
-    .right-sidebar{
+    .right-sidebar {
       order: 0;
-      flex:  0 0 100%;
+      flex: 0 0 100%;
     }
   }
   header {
@@ -15,10 +15,37 @@
       flex-direction: column;
       align-items: flex-start;
     }
+    .info-wrapper {
+      gap: 10px;
+      align-items: stretch;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      .avatar {
+        img {
+          width: 80px;
+          height: 80px;
+        }
+        .name {
+          font-size: 10px;
+          margin-top: 0;
+        }
+      }
+    }
+    .information {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .address {
+        margin-top: auto;
+      }
+    }
 
     .social {
-      margin-top: 20px;
+      margin-top: 0;
       flex-wrap: wrap;
+      justify-content: start;
+      gap: 10px;
     }
   }
 
@@ -26,6 +53,18 @@
     .tabs {
       .tab-buttons {
         flex-wrap: nowrap;
+      }
+    }
+  }
+
+  footer {
+    .footer-content {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      > div {
+      }
+      .contact-preference {
       }
     }
   }
