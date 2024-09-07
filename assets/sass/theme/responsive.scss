@@ -1,3 +1,8 @@
+@media (min-width: 768px) {
+  footer .download-cv .download-options {
+    justify-content: left;
+  }
+}
 // Media Queries for Responsiveness
 @media (max-width: 767px) {
   main {
